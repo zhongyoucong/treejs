@@ -3,7 +3,10 @@
   if (!w.$TREE) {
     w.$TREE = {};
   }
-
+  function objSortBykey(objArr, key) {
+    let result = objArr.slice(0);
+    return result.sort((a, b) => a[key] - b[key]);
+  }
   function TREEOBJ (pidKey, childrenKey, label, topPid) {
     // 对象主体
     this.pidKey = pidKey; // 所属父节点id key
@@ -37,6 +40,21 @@
       }
       getData(data);
       return res;
+    };
+
+    // 获取树节点的数量
+    this.getTreeNodeCount = function (data) {
+      return this.getTreeDataList(data).length || null;
+    };
+
+    // 根据对树节点的子节点根据key值进行排序
+    this.sortTreeNodeChildrenByKey = function (data, id, key) {
+      this.getTreeItem(data, id, item => {
+        if (item) {
+          item[childrenKey] = objSortBykey(item[childrenKey], key);
+        }
+      });
+      return data;
     };
 
     // id获取节点递归函数
