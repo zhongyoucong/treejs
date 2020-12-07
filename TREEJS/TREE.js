@@ -24,6 +24,21 @@
       return list;
     };
 
+    // 将树型结构数据处理成二位数组返回
+    this.getTreeDataList = function (data) {
+      const res = [];
+      function getData(data) {
+        data.forEach(v => {
+          res.push(v);
+          if (v[childrenKey]) {
+            getData(v[childrenKey]);
+          }
+        });
+      }
+      getData(data);
+      return res;
+    };
+
     // id获取节点递归函数
     this.getTreeItem = function (data, id, callBack) {
       data.map(item => {
