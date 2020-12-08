@@ -3,6 +3,7 @@
   if (!w.$TREE) {
     w.$TREE = {};
   }
+  // 排序函数
   function objSortBykey(objArr, key) {
     let result = objArr.slice(0);
     return result.sort((a, b) => a[key] - b[key]);
