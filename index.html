@@ -59,36 +59,36 @@
     console.log('树数据==', tree);
     console.log('tree数据==', OBJ.sortTreeNodeChildrenByKey(tree, 2, 'name'));
 
-    // let parentNode = OBJ.getParentNode(tree, 5);
-    // console.log('父节点node==', parentNode);
+    let parentNode = OBJ.getParentNode(tree, 5);
+    console.log('父节点node==', parentNode);
 
-    // let node = OBJ.getTreeNodeById(tree, 5);
-    // console.log('节点node==', node);
+    let node = OBJ.getTreeNodeById(tree, 5);
+    console.log('节点node==', node);
 
-    // let level = OBJ.getLevelNode(tree, 5);
-    // console.log('层级节点node==', level);
+    let level = OBJ.getLevelNode(tree, 5);
+    console.log('层级节点node==', level);
 
-    // OBJ.setTreeNodeValue(tree, 5, 'zyc', [1, 2, 3, 4]);
-    // console.log('设置节点node==', tree);
+    OBJ.setTreeNodeValue(tree, 5, 'zyc', [1, 2, 3, 4]);
+    console.log('设置节点node==', tree);
 
-    // let value = OBJ.getTreeNodeValueByKey(tree, 5, 'zyc');
-    // console.log('获取节点node-value==', value);
+    let value = OBJ.getTreeNodeValueByKey(tree, 5, 'zyc');
+    console.log('获取节点node-value==', value);
 
-    // OBJ.delTreeNodeKey(tree, 5, 'zyc');
-    // console.log('删除key的树节点数据==', tree);
+    OBJ.delTreeNodeKey(tree, 5, 'zyc');
+    console.log('删除key的树节点数据==', tree);
 
-    // OBJ.appendChildrenNode(tree, 5, {id: 3232, pid: 21, name: '新增子节点1'});
-    // OBJ.appendChildrenNode(tree, 5, {id: 4324, pid: 21, name: '新增子节点2'});
-    // console.log('删除key的树节点数据==', tree);
+    OBJ.appendChildrenNode(tree, 5, {id: 3232, pid: 21, name: '新增子节点1'});
+    OBJ.appendChildrenNode(tree, 5, {id: 4324, pid: 21, name: '新增子节点2'});
+    console.log('删除key的树节点数据==', tree);
 
-    // OBJ.clearChildrenNode(tree, 5);
-    // console.log('清空树子节点数据==', tree);
+    OBJ.clearChildrenNode(tree, 5);
+    console.log('清空树子节点数据==', tree);
 
-    // let nodeLevel = OBJ.getNodeLevel(tree, 5);
-    // console.log('树节点层级==', nodeLevel);
+    let nodeLevel = OBJ.getNodeLevel(tree, 5);
+    console.log('树节点层级==', nodeLevel);
 
-    // let childrens = OBJ.getParentNodes(tree, 5);
-    // console.log('树节子子节点==', childrens);
+    let childrens = OBJ.getParentNodes(tree, 5);
+    console.log('树节子子节点==', childrens);
   </script>
 </head>
 
